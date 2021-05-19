@@ -1,0 +1,14 @@
+@layout('layouts')
+
+@section('content')
+
+    <main>
+        <h2>{{ pizza.title }}</h2>
+        <img src="{{ pizza.img }}" alt="{{ pizza.title }}">
+        <p>{{ pizza.body }}</p>
+        <a href="/index">Go back</a> 
+        <a href="pizzaitem/add/{{ pizza.id }}"><button>Add to cart</button></a>
+    </main>
+
+
+@endsection

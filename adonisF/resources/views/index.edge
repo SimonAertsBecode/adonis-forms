@@ -1,0 +1,21 @@
+@layout('layouts')
+
+@section('content')
+
+    <header>
+        <h1>Find here all the pizzas made by the hands of toto himself</h1>
+    </header>
+    <main>
+        <ul>
+            @each(pizza in pizzas)
+            <li>
+                <h3>{{ pizza.title }}</h3>
+                <a href="/pizzaitem/{{ pizza.id }}"><img src="{{ pizza.img }}" alt="{{ pizza.title }}"></a>
+                <p>{{ pizza.body }}</p>
+            </li>
+            @endeach
+        </ul>
+    </main>
+
+
+@endsection
